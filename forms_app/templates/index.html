@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    {%block title%}<title>Homepage</title>{%endblock%}
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+
+        <div class="jumbotron">
+            <div class="container" align="center">
+                {%block content%}
+                <h1>Click link below to go to sign up page</h1>
+                <p>Written in Django</p>
+                <p>Django ~ {{django|title}}</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quaerat officia optio modi
+                    tempore quasi rem totam beatae, sunt iste incidunt et explicabo, assumenda temporibus id animi.
+                    Maxime, odio quam!</p>
+                    
+                <p>
+                    <a class="btn btn-primary btn-lg" href="{% url 'sign_up'%}">Sign Up</a>
+                    <a class="btn btn-success btn-lg" href="{% url 'users_list'%}">Users List</a>
+                    <a class="btn btn-danger btn-lg" href="{% url 'admin:index'%}">Admin</a>
+                </p>
+                {%endblock%}
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
